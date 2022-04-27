@@ -10,10 +10,14 @@ import React, { useState } from "react";
 import Logo from "../../.expo/assets/images/logo.png";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
+import { useNavigation } from "@react-navigation/native";
+
 const SignInScreen = () => {
   const { height } = useWindowDimensions();
   const [username, set_username] = useState("");
   const [password, set_password] = useState("");
+
+  const navigation = useNavigation();
 
   const onSignInPressed = () => {
     console.warn("Sign in");
@@ -32,7 +36,8 @@ const SignInScreen = () => {
   };
 
   const on_create_account = () => {
-    console.warn("Create an account");
+    // console.warn("Create an account");
+    navigation.navigate("SignUp");
   };
 
   return (

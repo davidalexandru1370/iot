@@ -1,19 +1,17 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import SignInScreen from "./screens/SignInScreen";
-import SignUpScreen from "./screens/SignUpScreen";
+
+import Navigation from "./navigation/navigation";
 export default function App() {
   return (
     <View style={styles.container}>
-      <SignUpScreen />
-      <StatusBar style="auto" />
+      <Navigation />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
     flex: 1,
     backgroundColor: "#f9fbfc",
     // backgroundColor: "#fff",

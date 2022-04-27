@@ -57,7 +57,7 @@ const SignUpScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    top: 0,
+    padding: 20,
     alignItems: "center",
     flex: 1,
     justifyContent: "flex-start",
