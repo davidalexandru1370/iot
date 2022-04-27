@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { Button } from "react-native-web";
 import SignInScreen from "./screens/SignInScreen";
+import SignUpScreen from "./screens/SignUpScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <SignInScreen></SignInScreen>
+      <SignUpScreen />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,6 +13,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    padding: 20,
     flex: 1,
     backgroundColor: "#f9fbfc",
     // backgroundColor: "#fff",
