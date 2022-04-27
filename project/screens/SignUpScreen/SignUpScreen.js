@@ -3,15 +3,24 @@ import React, { useState } from "react";
 import CustomButton from "../../components/CustomButton";
 import CustomInput from "../../components/CustomInput";
 import Logo from "../../.expo/assets/images/logo.png";
+import { useNavigation } from "@react-navigation/native";
+
 const SignUpScreen = () => {
   const [username, set_username] = useState("");
   const [email, set_email] = useState("");
   const [password, set_password] = useState("");
   const [repeat_password, set_repeat_password] = useState("");
 
+  const navigation = useNavigation();
+
   const on_create_account_pressed = () => {
     console.warn("Create account");
   };
+
+  const on_sign_in = () => {
+    navigation.navigate("SignIn");
+  };
+
   return (
     <View style={styles.container}>
       <Image source={Logo} style={styles.logo} resizeMode="contain"></Image>
@@ -50,6 +59,12 @@ const SignUpScreen = () => {
         onPress={on_create_account_pressed}
         text="Create account"
         type="primary"
+      />
+
+      <CustomButton
+        onPress={on_sign_in}
+        text="Already have an account? Sign in."
+        type="tertiary"
       />
     </View>
   );
