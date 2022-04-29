@@ -47,6 +47,14 @@ const styles = StyleSheet.create({
   text_tertiary: {
     color: "#444",
   },
+
+  container_rounded: {
+    borderRadius: 25,
+  },
+
+  text_rounded: {
+    fontSize: 15,
+  },
 });
 
 export default CustomButton;

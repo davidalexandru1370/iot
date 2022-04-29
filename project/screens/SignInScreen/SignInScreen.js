@@ -20,7 +20,7 @@ const SignInScreen = () => {
   const navigation = useNavigation();
 
   const onSignInPressed = () => {
-    console.warn("Sign in");
+    navigation.navigate("Main");
   };
 
   const on_forgot_password_pressed = () => {
